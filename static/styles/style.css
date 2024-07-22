@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+/* ***************************************** */
+.header-container{
+    margin-bottom: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    z-index: 2;
+}
+#header{
+    
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    padding: 0.5vw 100px;
+    background: rgb(75, 48, 143);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    overflow: visible !important;
+    width: 60px ;
+}
+.logo img:hover{
+    transform: scale(1.1) ; 
+}
+.logo img:active{
+    transform: scale(1.2);
+}
+/* .navbar{
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: space-between;
+} */
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+.navbar a:hover::before{
+    width: 100%;
+}
+/* ************************************************* */
+.hero{
+    margin-top: 100px;
+    min-height:40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.frm-drop{
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 675px;
+    height: 375px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.drop-area{         /* label */
+    z-index: 1;
+    width: 550px;
+    height: 275px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#img-view{
+    width: 100%;
+    height: 65%;
+    border-radius: 20px;
+    border: 3px dashed #bbb5ff ;
+    background: #960c717a; 
+    background-position: center;
+    background-size: cover;
+}
+
+#img-view:hover{
+    border: 3px dashed #0eaf2e;
+    background-color: #1c1190cf;
+    
+}
+#img-view img{
+    z-index: 1;
+    width: 130px;
+    margin-top: 25px;
+}
+#img-view span{
+    display: block;
+    font-size: 12px;
+    color: #d8e5ed;
+    margin-top: 15px;
+    z-index: 1;
+}
+
+.btn-container{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    margin-top: 0.8rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.button{
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 35%;
+    height: 40px;
+    border: none;
+    background-color: #0eaf2e;
+    box-shadow: 0 5px 10px rgba(0,0,0,3);
+    font-weight:bold;
+    transition: transform 0.01 ease;
+}
+.button:hover{
+  transform: scale(1.05);
+}
+.button:active{
+    transform: scale(1.02);
+}
+/* ******************************************************** */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Arka plana almak için */
+  }
+
+  #bg-video {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Bozulmadan ölçeklenmesini sağlar */
+  }
+
+/* ********************************************************* */
+
+.hero .container {
+    z-index: 1;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+    width: 500px;
+	max-height: 275px;
+	overflow-y: auto;
+	margin-top: 5px;
+}
+
+.hero .drop-area.dragover{
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero .drop-area.dragover .on-drop {
+	display: inline;
+	font-size: 28px;
+    z-index: 1;
+}
+
+.hero .container .image {
+	/* width: calc(26% - 19px); */
+/*     display: flex;
+    align-items: flex-start; */
+    width: 100px;
+	margin-right: 15px;
+	height: 75px;
+	position: relative;
+	margin-bottom: 8px;
+    z-index: 1;
+}
+
+.hero .container .image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+    z-index: 1;
+}
+
+.hero .container .image span {
+	position: absolute;
+	top: -2px;
+	right: 9px;
+	font-size: 20px;    
+	cursor: pointer;
+    z-index: 1;
+}

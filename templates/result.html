@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/styles/508-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/styles/result.css">
+    <script src="https://kit.fontawesome.com/135bd1e96a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header-container">
+        <header id="header">
+            <a href="/home" class="logo">
+                <img src="/static/styles/508-icon.png" alt="Logo">
+            </a>
+            <nav class="navbar">
+                <a id="home-btn" href="/home">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">SERVICES</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </header>
+    </div>
+
+        <div class="resultContainer">
+            {% for photo_id in photo_ids %}
+            {% set photo_path = get_photo_by_id(photo_id[0]) %}
+            {% if photo_path %}
+                    <img class="result-Img" src="{{ url_for('static', filename=photo_path) }}" alt="Photo {{ photo_id[0] }}">
+                    <form action="/delete" method="post" style="display: inline;">
+                        <input type="hidden" name="photo_id" value="{{ photo_id[0] }}">
+                        <div class="rb-buttons">
+                            <button id="delete-btn" type="submit" style="background: none; border: none; cursor: pointer;">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                            <a download class="download-btn" href="{{ url_for('static', filename=photo_path) }}">   
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+
+                    </form>
+            {% endif %}
+        {% endfor %}
+        </div>
+
+    <div class="video-background">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="/static/styles/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</body>
+</html>
+

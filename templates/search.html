@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/styles/508-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/styles/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <header id="header">
+            <a href="/home" class="logo">
+                <img src="/static/styles/508-icon.png" alt="Logo">
+            </a>
+            <nav class="navbar">
+                <a id="home-btn" href="/home">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">SERVICES</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </header>
+    </div>
+
+    <div class="search_results">
+        <ul class="clrul">
+            <li>
+                <span class="green">90 - 100 </span>
+                <span>| Kesin Eşleşme</span>
+            </li>
+            <li>
+                <span class="yellow">83 - 89 </span>
+                <span>| Güvenli Eşleşme</span>
+            </li>
+            <li>
+                <span class="uncertain">70 - 82 </span>
+                <span>| Belirsiz Eşleşme</span>
+            </li>
+            <li>
+                <span class="low">50 - 69 </span>
+                <span>| Zayıf Eşleşme</span>
+            </li>
+        </ul>
+    
+        {% if results %}
+            <ul class="search_result_list">
+                {% for image, score in results %}
+                    <li>
+                        <div class="img-container">
+                            <img id="search_img" src="{{ url_for('static', filename='result/' + image) }}" alt="Similar Image">
+                            <p data-score="{{ score + 10 }}">{{ score + 10 }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No similar images found.</p>
+        {% endif %}
+    </div>
+    
+
+    <div class="video-background">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="/static/styles/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <script src="/static/scripts/search.js"></script>
+
+</body>
+</html>
+

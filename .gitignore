@@ -1,0 +1,7 @@
+.venv
+database.db
+database2.db
+uploads
+result
+dataset
+haarcascade_frontalface_default.xm
