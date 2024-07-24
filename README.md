@@ -25,6 +25,8 @@ Kodu çalıştırmaya başlamadan önce Database klasörünün içerisindeki "cr
 ----------------------------------------------------------------
 
 Gerekli klasörleri ve dosyaları doğru şekilde kurduğunuz bu şekilde gözükmesi lazım:
+
+
 ![Ekran görüntüsü 2024-07-24 165639](https://github.com/user-attachments/assets/9fe7cac2-cf57-4135-b44f-5c859fe7b7e0)
 
 
