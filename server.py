@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for,request, g, redirect
 from werkzeug.utils import secure_filename
 import sqlite3
 import os
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0" # Hata mesajını engellemek için,genel kod çalışabilirliğine bir etkisi yok
 from rembg import remove 
 from PIL import Image 
 import io
