@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 
     # iterate through all files in the input folder
     for filename in os.listdir(input_folder):
-        if filename.endswith(".jpg") or filename.endswith(".png"):  # assuming images are JPG or PNG
+        if filename.endswith((".jpg", ".png", ".jpeg")): 
             # construct the full path to the image
             image_path = os.path.join(input_folder, filename)
 
