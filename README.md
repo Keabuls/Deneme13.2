@@ -1,4 +1,5 @@
 !! Static içerisine result ve uploads klasörleri oluşturulmalı
+!! result klasörü oluşturulmak zorunda değil app.py çalıştığında otomatik olarak bir output_folder oluşturuyor
 
 Upload - remove background kullanıldığında asıl fotoğrafın kaydedildiği yer
 
