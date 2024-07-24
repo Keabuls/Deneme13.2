@@ -5,7 +5,7 @@ from imgbeddings import imgbeddings
 from PIL import Image
 import sqlite3
 import os
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0" # Hata mesajını engellemek için,genel kod çalışabilirliğine bir etkisi yok
 from IPython.display import display
 import json
 import numpy as np
