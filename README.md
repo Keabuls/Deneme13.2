@@ -10,4 +10,5 @@ Result - küçük fotoğrafların kaydedildiği yer , daha sonra buradaki fotoğ
 
 
 input_folder = "dataset"   # İşlenecek resim dosyalarının bulunduğu klasörün yolu
+
 output_folder = "result"   # Çıktıların kaydedileceği klasörün yolu
