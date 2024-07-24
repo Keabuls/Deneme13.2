@@ -30,6 +30,10 @@ Gerekli klasörleri ve dosyaları doğru şekilde kurduğunuz bu şekilde gözü
 
 ![Ekran görüntüsü 2024-07-24 165639](https://github.com/user-attachments/assets/9fe7cac2-cf57-4135-b44f-5c859fe7b7e0)
 
+----------------------------------------------------------------
+
+Birden fazla fotoğrafı ayrı ayrı şekilde yüklemek istediğinizde muhtemelen başaramayacaksınız çünkü siz her yeni input eklediğinizde "index.js"te yeni bir INPUT CHANGE EVENT'i tetikleyeceksiniz.Nedenini anlamadığım bir şekilde yeni INPUT CHANGE EVENT verdiğimizde eski oluşan input list'in içindeki verilerin üzerine yeni verileri yazıyor.Bu durumu engellesem bile list'i removebg kısmına gönderdiğimde listeden sadece tek bir elemanı alıyor.Şimdilik bu duruma bilgim yetmedi. 
+
 
 
 
