@@ -88,7 +88,7 @@ def upload_file():
     return redirect(url_for('result'))
 
 
-def find_top_n_similar_embeddings(conn, target_embedding, n=20):
+def find_top_n_similar_embeddings(conn, target_embedding, n=20): # burada n'e vereceğiniz değer search_result'ta göstereceği fotoğraf sayısını temsil ediyor
     cur = conn.cursor()
     cur.execute("SELECT picture, embedding FROM pictures")
 
