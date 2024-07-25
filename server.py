@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 import sqlite3
 import os
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0" # Hata mesajını engellemek için,genel kod çalışabilirliğine bir etkisi yok
-from rembg import remove 
+from rembg import new_session, remove
 from PIL import Image 
 import io
 import base64
@@ -74,8 +74,10 @@ def upload_file():
             file.save(file_path)
             
             # Arka planı sil ve sonucu /uploads klasörüne kaydet
+            model_name = "isnet-general-use"
+            session = new_session(model_name)
             input_image = Image.open(file.stream)
-            output_image = remove(input_image)
+            output_image = remove(input_image,session=session)
 
             output_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'removed_' + filename)
             output_image.save(output_file_path, format='PNG')
