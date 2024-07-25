@@ -1,7 +1,7 @@
 !! Static içerisine result ve uploads klasörleri oluşturulmalı
 !! result klasörü oluşturulmak zorunda değil app.py çalıştığında otomatik olarak bir output_folder oluşturuyor
 
-Upload - remove background kullanıldığında asıl fotoğrafın kaydedildiği yer
+Uploads - remove background kullanıldığında asıl fotoğrafın kaydedildiği yer
 
 Result - küçük fotoğrafların kaydedildiği yer , daha sonra buradaki fotoğraflara embedding uygulanarak database2.db ye kaydediliyor
 
@@ -25,7 +25,7 @@ Kodu çalıştırmaya başlamadan önce Database klasörünün içerisindeki "cr
 
 ----------------------------------------------------------------
 
-Gerekli klasörleri ve dosyaları doğru şekilde kurduğunuz bu şekilde gözükmesi lazım:
+Gerekli klasörleri ve dosyaları doğru şekilde kurduğunuzda bu şekilde gözükmesi lazım:
 
 
 ![Ekran görüntüsü 2024-07-24 165639](https://github.com/user-attachments/assets/9fe7cac2-cf57-4135-b44f-5c859fe7b7e0)
